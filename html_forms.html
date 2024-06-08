@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Web Forms</title>
+</head>
+
+<body>
+    <!-- Task 1: Implementing Email Input
+
+    Create an HTML form with a text input field of type email.
+    Add a label and placeholder text to indicate that this input is for an email address.
+    Implement HTML5 validation to ensure that only valid email addresses are accepted.
+    Provide a submit button to allow users to submit their email addresses. -->
+
+    <form action="/submit_form">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" aria-required="true" aria-label="Email Address">
+        <input type="submit" value="Submit">
+    </form><br>
+    <!-- Task 2: Utilizing Number Input
+
+    Build a web form with a number input field.
+    Add a label and placeholder text to instruct users to enter a quantity.
+    Use HTML5 attributes to define the minimum and maximum values accepted for this input.
+    Include step attributes for incrementing or decrementing the value.
+    Implement a submit button for users to submit their chosen quantity. -->
+
+    <form action="/submit_form">
+        <label for="quantity">Enter a quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="1-100"
+            aria-valuemin="1" aria-valuemax="100" aria-valuenow="50">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <!-- Task 3: Employing Date Input
+
+    Create an HTML form that includes a date input field.
+    Add a label and placeholder text to indicate that users should select a date.
+    Implement HTML5 attributes to specify the date format and range.
+    Provide a submit button for users to submit their chosen date. -->
+
+    <!-- Task 4: Enhancing User Experience with Range Input
+
+    Develop an HTML form with a range input field.
+    Include a label and placeholder text indicating what the range represents (e.g., rating or quantity).
+    Utilize HTML5 attributes to set the minimum and maximum values for the range.
+    Display the current value of the range to users.
+    Add a submit button for users to submit their chosen value. -->
+
+    <form action="/submit_form">
+        <label for="date">Select a date: </label><br>
+        <input type="date" id="date" name="date" min="2024-05-01" max="2024-06-06" required aria-required="true">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <!-- Task 1: Creating a Selection Experience
+
+    Now let's add some different selection features to your form to spice things up.
+    Include a select menu that allows users to choose their favorite programming language from a list of options.
+    Implement a set of radio buttons for users to indicate their level of expertise (beginner, intermediate, advanced).
+    Add checkboxes to let users select their preferred development platforms (web, mobile, desktop).
+    Expected Outcomes: Students should be able to create a selection experience with select menus,
+    radio buttons, and checkboxes to capture user preferences.
+
+    Task 2: Improving Accessibility
+
+    Ensure that all form elements have associated labels using the for attribute.
+    Implement ARIA attributes to enhance accessibility for users with disabilities.
+    Test the form with screen readers to verify that it provides a user-friendly experience. -->
+
+    <form action="/submit_form">
+        <label for="language">Favorite Programming Language:</label><br>
+        <br>
+        <select id="language" name="language" aria-required="true">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+        </select><br>
+
+        <p>Level of Expertise:</p>
+        <input type="radio" id="beginner" name="expertise" value="beginner" aria-checked="false">
+        <label for="beginner">Beginner</label><br>
+        <input type="radio" id="intermediate" name="expertise" value="intermediate" aria-checked="false">
+        <label for="intermediate">Intermediate</label><br>
+        <input type="radio" id="advanced" name="expertise" value="advanced" aria-checked="false">
+        <label for="advanced">Advanced</label><br>
+
+        <p>Preferred Development Platforms:</p>
+        <input type="checkbox" id="web" name="platform" value="web" aria-checked="false">
+        <label for="web">Web</label><br>
+        <input type="checkbox" id="mobile" name="platform" value="mobile" aria-checked="false">
+        <label for="mobile">Mobile</label><br>
+        <input type="checkbox" id="desktop" name="platform" value="desktop" aria-checked="false">
+        <label for="desktop">Desktop</label><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
